@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+            <a href="/#tray-bakes"><button class="back-to-traybakes" role="button" aria-label="Go back to Tray Bakes">&larr; Tray Bakes</button></a>
+            <h2 id="main-content">Chocolate Deluxe</h2>
+            <p>This recipe is designed for a rectangular tray or tin measuring <span id="original-length">30</span>cm x <span id="original-width">20</span>cm.  
+                To customize the recipe for a different tray size, simply enter your dimensions in the fields below and scale the ingredients accordingly!
+            </p>
+            <div id="chocolate" class="scalable-container">
+                <div class="scalable-recipe">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li><span class="amount">200</span> <span class="unit">g</span> unsalted butter (softened)</li>
+                        <li><span class="amount">200</span> <span class="unit">g</span> granulated sugar</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> brown sugar</li>
+                        <li><span class="amount">4</span> <span class="unit">g</span> salt</li>
+                        <li><span class="amount">5</span> <span class="unit">g</span> vanilla extract</li>
+                        <li><span class="amount">200</span> <span class="unit">g</span> eggs (about 4 medium eggs)</li>
+                        <li><span class="amount">200</span> <span class="unit">g</span> all-purpose flour</li>
+                        <li><span class="amount">50</span> <span class="unit">g</span> cocoa powder</li>
+                        <li><span class="amount">10</span> <span class="unit">g</span> baking powder</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> whole milk</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> dark chocolate (melted, 70% cocoa)</li>
+                        <li><span class="amount">75</span> <span class="unit">g</span> chocolate chips (optional)</li>
+                    </ul>
+                    <h4>Enter your tray size below:</h4>
+                    <input id="width-input" type="number" class="positive-number" placeholder="Width in cm"></input>
+                    <input id="length-input" type="number" class="positive-number" placeholder="Length in cm"></input>
+                    <button id="scale-button" aria-label="Scale recipe based on tray size">Scale</button>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p id="no-area">Values must be entered into both boxes</p>
+                </div>
+                <div class="scalable-recipe">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Preheat your oven to 180°C and grease a rectangular baking tray (approximately 30cm x 20cm) or line it with parchment paper.</li>
+                        <li>In a large bowl, cream together the softened butter, granulated sugar, and brown sugar until light and fluffy.</li>
+                        <li>Beat in the eggs, one at a time, ensuring each is fully incorporated before adding the next. Stir in the vanilla extract.</li>
+                        <li>In a separate bowl, whisk together the flour, cocoa powder, baking powder, and salt.</li>
+                        <li>Gradually add the dry ingredients to the wet mixture, alternating with the milk, mixing gently until just combined.</li>
+                        <li>Fold in the melted dark chocolate, followed by the chocolate chips if using.</li>
+                        <li>Pour the batter into the prepared baking tray and spread it evenly.</li>
+                        <li>Bake for 25–30 minutes, or until a toothpick inserted into the center comes out clean or with a few moist crumbs.</li>
+                        <li>Allow the cake to cool in the tray for about 10 minutes before transferring it to a wire rack to cool completely.</li>
+                        <li>Slice and enjoy!</li>
+                    </ol>
+                </div>
+            </div>   
+{% endblock %}
+{% block script %}
+    <script src="./static/js/scale.js"></script>
+{% endblock %}

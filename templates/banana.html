@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block main %}
+            <a href="/#tray-bakes"><button class="back-to-traybakes" role="button" aria-label="Go back to Tray Bakes">&larr; Tray Bakes</button></a>
+            <h2 id="main-content">Banana Bread</h2>
+            <p>The following recipe is for a rectangular tray or tin of size <span id="original-length">22</span>cm x<span id="original-width">12</span>cm. To adjust the recipe to suit 
+                the size of your tray or tin, please enter the dimensions in the boxes below and scale the recipe to meet
+                your needs!
+            </p>
+            <div id="banana" class="scalable-container">
+                <div class="scalable-recipe">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li><span class="amount">250</span> <span class="unit">g</span> ripe bananas (mashed)</li>
+                        <li><span class="amount">200</span> <span class="unit">g</span> all-purpose flour</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> granulated sugar</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> unsalted butter (melted)</li>
+                        <li><span class="amount">50</span> <span class="unit">g</span> brown sugar</li>
+                        <li><span class="amount">8</span> <span class="unit">g</span> baking powder</li>
+                        <li><span class="amount">4</span> <span class="unit">g</span> baking soda</li>
+                        <li><span class="amount">2</span> <span class="unit">g</span> salt</li>
+                        <li><span class="amount">5</span> <span class="unit">g</span> ground cinnamon</li>
+                        <li><span class="amount">2</span> <span class="unit">g</span> vanilla extract</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> eggs (about 2 medium eggs)</li>
+                        <li><span class="amount">50</span> <span class="unit">g</span> milk</li>
+                        <li><span class="amount">75</span> <span class="unit">g</span> chopped walnuts (optional)</li>
+                        <li><span class="amount">75</span> <span class="unit">g</span> chocolate chips (optional)</li>
+                    </ul>
+                    <h4>Enter your tray size below:</h4>
+                    <input id="width-input" type="number" class="positive-number" placeholder="Width in cm"></input>
+                    <input id="length-input" type="number" class="positive-number" placeholder="Length in cm"></input>
+                    <button id="scale-button" aria-label="Scale recipe based on tray size">Scale</button>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p id="no-area">Values must be entered into both boxes</p>
+                </div>
+                <div class="scalable-recipe">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Preheat your oven to 175°C and grease a loaf pan or line it with parchment paper.</li>
+                        <li>In a bowl, mash the ripe bananas until smooth.</li>
+                        <li>Whisk in the melted butter, granulated sugar, and brown sugar until well combined.</li>
+                        <li>Add the eggs, milk, and vanilla extract, then mix until smooth.</li>
+                        <li>In a separate bowl, whisk together the flour, baking powder, baking soda, salt, and cinnamon.</li>
+                        <li>Gradually add the dry ingredients to the wet mixture, stirring gently until just combined. Do not overmix.</li>
+                        <li>Fold in the chopped walnuts and chocolate chips if using.</li>
+                        <li>Pour the batter into the prepared loaf pan and spread it evenly.</li>
+                        <li>Bake for 50–60 minutes, or until a toothpick inserted into the center comes out clean.</li>
+                        <li>Allow the banana bread to cool in the pan for about 10 minutes before transferring it to a wire rack to cool completely.</li>
+                        <li>Slice and enjoy!</li>
+                    </ol>
+                </div>
+            </div>
+{% endblock %}
+{% block script %}
+    <script src="./static/js/scale.js"></script>
+{% endblock %}

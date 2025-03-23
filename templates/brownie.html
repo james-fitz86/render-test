@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+            <a href="/#tray-bakes"><button class="back-to-traybakes" role="button" aria-label="Go back to Tray Bakes">&larr; Tray Bakes</button></a>
+            <h2 id="main-content">Brownie</h2>
+            <p>This recipe is intended for a square tray or tin with dimensions of <span id="original-length">20</span>cm x <span id="original-width">20</span>cm.  
+                To tailor the recipe for a different tray size, enter your tray dimensions in the fields below and adjust the ingredients accordingly!
+            </p>
+            <div id="brownie" class="scalable-container">
+                <div class="scalable-recipe">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li><span class="amount">200</span> <span class="unit">g</span> dark chocolate (70% cocoa, chopped)</li>
+                        <li><span class="amount">150</span> <span class="unit">g</span> unsalted butter</li>
+                        <li><span class="amount">200</span> <span class="unit">g</span> granulated sugar</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> brown sugar</li>
+                        <li><span class="amount">3</span> <span class="unit">g</span> salt</li>
+                        <li><span class="amount">5</span> <span class="unit">g</span> vanilla extract</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> eggs (about 2 medium eggs)</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> all-purpose flour</li>
+                        <li><span class="amount">30</span> <span class="unit">g</span> cocoa powder</li>
+                        <li><span class="amount">5</span> <span class="unit">g</span> baking powder</li>
+                        <li><span class="amount">75</span> <span class="unit">g</span> chocolate chips (optional)</li>
+                        <li><span class="amount">50</span> <span class="unit">g</span> chopped walnuts (optional)</li>
+                    </ul>
+                    <h4>Enter your tray size below:</h4>
+                    <input id="width-input" type="number" class="positive-number" placeholder="Width in cm"></input>
+                    <input id="length-input" type="number" class="positive-number" placeholder="Length in cm"></input>
+                    <button id="scale-button" aria-label="Scale recipe based on tray size">Scale</button>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p id="no-area">Values must be entered into both boxes</p>
+                </div>
+                <div class="scalable-recipe">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Preheat your oven to 175°C and grease a square baking pan or line it with parchment paper.</li>
+                        <li>In a heatproof bowl, melt the dark chocolate and butter together over a double boiler or in short bursts in the microwave. Stir until smooth.</li>
+                        <li>Whisk in the granulated sugar and brown sugar until well combined.</li>
+                        <li>Add the eggs and vanilla extract, then mix until smooth and glossy.</li>
+                        <li>In a separate bowl, whisk together the flour, cocoa powder, baking powder, and salt.</li>
+                        <li>Gradually fold the dry ingredients into the wet mixture, stirring gently until just combined. Do not overmix.</li>
+                        <li>Fold in the chocolate chips and chopped walnuts if using.</li>
+                        <li>Pour the batter into the prepared baking pan and spread it evenly.</li>
+                        <li>Bake for 25–30 minutes, or until a toothpick inserted into the center comes out with a few moist crumbs.</li>
+                        <li>Allow the brownies to cool in the pan for about 10 minutes before transferring them to a wire rack to cool completely.</li>
+                        <li>Slice and enjoy!</li>
+                    </ol>
+                </div>
+            </div> 
+{% endblock %}
+{% block script %}
+    <script src="./static/js/scale.js"></script>
+{% endblock %}

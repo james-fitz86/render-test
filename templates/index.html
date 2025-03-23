@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+
+{% block main %}
+            <section id="home" aria-labelledby="main-content">
+                <h2 id="main-content" tabindex="0">Welcome</h2>
+                <div id="welcome-container">
+                    <div id="baker">
+                        <img id="baker-photo" src="./static/images/Welcome/betty.jpeg" alt="Photo of Betty, the baker">
+                    </div>
+                    <div id="welcome-content">
+                        <p id="first-par">
+                            Welcome to Betty’s Bakes, a haven for bakers and pastry lovers alike. 
+                            With over a decade of experience, Betty has mastered the art of baking, from 
+                            rustic loaves to indulgent tray bakes and everything in between. Whether 
+                            you’re looking for the perfect bread recipe, a quick midweek treat, or 
+                            inspiration for your next baking adventure, you’ll find a carefully curated 
+                            collection of tried-and-tested recipes here. Each bake is crafted with a 
+                            passion for flavour, texture, and simplicity, ensuring that both beginners and 
+                            seasoned bakers can achieve delicious results every time.
+                        </p>
+                        <p>
+                            Beyond recipes, Betty’s Bakes also features a portfolio gallery showcasing some 
+                            of Betty’s finest creations, offering a glimpse into the skill and artistry that 
+                            comes with years of practice. For those eager to stay updated, there’s a newsletter 
+                            packed with exclusive baking tips, seasonal inspiration, and new recipe alerts. 
+                            Whether you’re here to refine your skills, discover new favourites, or simply admire 
+                            beautiful bakes, Betty’s Bakes is the perfect place to indulge your love for all things 
+                            baked.
+                        </p>
+                    </div>
+                </div>
+                <div id="section-divider">
+                    <img class="divider-image" src="./static/images/Logos/header-logo.png" alt="Logo">
+                    <img class="divider-image" src="./static/images/Logos/header-logo.png" alt="Logo">
+                    <img class="divider-image" src="./static/images/Logos/header-logo.png" alt="Logo">
+                    <img class="divider-image" src="./static/images/Logos/header-logo.png" alt="Logo">
+                    <img class="divider-image" src="./static/images/Logos/header-logo.png" alt="Logo">
+                </div>
+            </section>
+            <section id="breads" aria-labelledby="breads-heading">
+                <h2 tabindex="0">Breads</h2>
+                    <p>
+                        Explore the collection of delicious bread recipes, 
+                        perfect for any occasion. Each recipe is crafted 
+                        for incredible flavour and texture. Select a recipe 
+                        below to reveal the full details and start baking 
+                        your next favourite treat!
+                    </p>
+                    <div id="bread-container">
+                    <div class="bread-recipe" tabindex="0" role="button" aria-label="View Wheat Bread recipe">
+                        <h3>Wheat bread</h3>
+                        <img class="bread-photo" src="./static/images/Breads/bread_1.jpeg" alt="Wheat bread">
+                    </div>
+                    <div class="bread-recipe" tabindex="0" role="button" aria-label="View Brown Bread recipe">
+                        <h3>Brown bread</h3>
+                        <img class="bread-photo" src="./static/images/Breads/bread_2.jpeg" alt="Brown bread">
+                    </div>
+                    <div class="bread-recipe" tabindex="0" role="button" aria-label="View Rye Bread recipe">
+                        <h3>Rye bread</h3>
+                        <img class="bread-photo" src="./static/images/Breads/bread_3.jpeg" alt="Rye bread">
+                    </div>
+                </div>
+                      
+                      
+            </section>
+            <section id="tray-bakes" aria-labelledby="tray-bakes-heading">
+                <h2 tabindex="0">Tray Bakes</h2>
+                <p>
+                    Indulge in a variety of irresistible bakes, from rich brownies 
+                    to creamy cheesecakes and classic banana bread. Whether you're 
+                    craving something chocolatey, buttery, or perfectly spiced, there's 
+                    a treat for every sweet tooth. Browse the recipes below and discover 
+                    how to create these delicious favorites at home!
+                </p>
+                <div id="tray-container">
+                    <a href="{{ url_for('banana') }}" aria-label="View Banana Bread recipe"><div class="tray-recipe">
+                        <h3>Banana Bread</h3>
+                        <img class="tray-photo" src="./static/images/Traybakes/tray_1.jpeg" alt="Banana Bread">
+                    </div>
+                    </a>
+                    <a href="{{ url_for('chocolate') }}" aria-label="View Chocolate Deluxe recipe"><div class="tray-recipe">
+                        <h3>Chocolate Deluxe</h3>
+                        <img class="tray-photo" src="./static/images/Traybakes/tray_2.jpeg" alt="Chocolate Deluxe">
+                    </div>
+                    </a>
+                    <a href="{{ url_for('cheesecake') }}" aria-label="View Baked Cheesecake recipe"><div class="tray-recipe">
+                        <h3>Baked Cheesecake</h3>
+                       <img class="tray-photo" src="./static/images/Traybakes/tray_3.jpeg" alt="Baked Cheesecake"> 
+                    </div>
+                    </a>
+                    <a href="{{ url_for('brownie') }}" aria-label="View Brownie recipe"><div class="tray-recipe">
+                        <h3>Brownie</h3>
+                       <img class="tray-photo" src="./static/images/Traybakes/tray_4.jpeg" alt="Brownie"> 
+                    </div>
+                    </a>
+                </div>
+            </section>
+            <section id="quick-recipes" aria-labelledby="quick-recipes-heading">
+                <h2 tabindex="0">Quick Recipes</h2> 
+                <p>Explore our collection of quick and easy baking recipes! 
+                    Use the left and right arrows to scroll through the delicious 
+                    options. Click on the ingredients to mark them, and when you're 
+                    ready, hit the 'Add to Shopping List' button to collect everything 
+                    you need. Perfect for hassle-free baking and shopping!</p>
+                <span class="previous" tabindex="0" role="button" aria-label="Scroll left">&larr;</span>
+                <span class="next" tabindex="0" role="button" aria-label="Scroll right">&rarr;</span>
+                <div id="quick-container">
+                    <div class="quick-recipes">
+                        <h3>Lemon Drizzle Cake</h3>
+                            <h4>Ingredients</h4>
+                            <ul>
+                                <li tabindex="0">225g plain flour</li>
+                                <li tabindex="0">225g sugar</li>
+                                <li tabindex="0">225g butter</li>
+                                <li tabindex="0">4 eggs</li>
+                                <li tabindex="0">10g baking powder</li>
+                                <li tabindex="0">Zest of 2 lemons</li>
+                                <li tabindex="0">50ml lemon juice</li>
+                                <li tabindex="0">50g icing sugar</li>
+                            </ul>
+                            <ol>
+                                <li>Preheat oven to 180°C and line a loaf tin.</li>
+                                <li>Cream butter and sugar, then add eggs one at a time.</li>
+                                <li>Fold in flour, baking powder, and lemon zest.</li>
+                                <li>Bake for 40 minutes.</li>
+                                <li>Mix lemon juice with icing sugar.</li>
+                                <li>Drizzle over the cake while warm.</li>
+                            </ol>
+                    </div>
+                    <div class="quick-recipes">
+                        <h3>Carrot Cake</h3>
+                            <h4>Ingredients</h4>    
+                            <ul>
+                                <li tabindex="0">250g plain flour</li>
+                                <li tabindex="0">200g sugar</li>
+                                <li tabindex="0">200ml vegetable oil</li>
+                                <li tabindex="0">3 eggs</li>
+                                <li tabindex="0">5g cinnamon</li>
+                                <li tabindex="0">5g baking soda</li>
+                                <li tabindex="0">200g grated carrots</li>
+                            </ul>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li>Preheat oven to 180°C and grease a cake tin.</li>
+                                <li>Whisk sugar, oil, and eggs together.</li>
+                                <li>Mix in flour, cinnamon, and baking soda.</li>
+                                <li>Stir in grated carrots.</li>
+                                <li>Pour into the tin and bake for 40 minutes.</li>
+                            </ol>
+                    </div>
+                    <div class="quick-recipes">
+                        <h3>Apple Crumble</h3>
+                            <h4>Ingredients</h4>
+                            <ul>
+                                <li tabindex="0">4 apples, peeled and sliced</li>
+                                <li tabindex="0">200g plain flour</li>
+                                <li tabindex="0">100g butter</li>
+                                <li tabindex="0">100g sugar</li>
+                                <li tabindex="0">5g cinnamon</li>
+                            </ul>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li>Preheat oven to 180°C.</li>
+                                <li>Place apples in a baking dish.</li>
+                                <li>Mix flour, butter, and sugar to make crumbs.</li>
+                                <li>Sprinkle over apples.</li>
+                                <li>Bake for 30 minutes.</li>
+                            </ol>
+                    </div>
+                    <div class="quick-recipes">
+                        <h3>Shortbread Cookies</h3>
+                            <h4>Ingredients</h4>
+                            <ul>
+                                <li tabindex="0">300g plain flour</li>
+                                <li tabindex="0">200g butter</li>
+                                <li tabindex="0">100g sugar</li>
+                            </ul>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li>Preheat oven to 160°C.</li>
+                                <li>Mix flour, butter, and sugar to form dough.</li>
+                                <li>Roll out and cut into shapes.</li>
+                                <li>Bake for 20 minutes.</li>
+                            </ol>
+
+                    </div>
+                    <div class="quick-recipes">
+                        <h3>Vanilla Cupcakes</h3>
+                            <h4>Ingredients</h4>
+                            <ul>
+                                <li tabindex="0">200g plain flour</li>
+                                <li tabindex="0">200g sugar</li>
+                                <li tabindex="0">200g butter</li>
+                                <li tabindex="0">4 eggs</li>
+                                <li tabindex="0">10g baking powder</li>
+                                <li tabindex="0">5g vanilla extract</li>
+                                <li tabindex="0">50ml milk</li>
+                            </ul>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li>Preheat oven to 180°C and line a muffin tray.</li>
+                                <li>Cream butter and sugar until fluffy.</li>
+                                <li>Add eggs one at a time.</li>
+                                <li>Sift in flour and baking powder.</li>
+                                <li>Mix in vanilla and milk.</li>
+                                <li>Spoon into cases and bake for 20 minutes.</li>
+                            </ol>
+                    </div>
+                    <div class="quick-recipes">
+                        <h3>Vanilla Sponge Cake</h3>
+                            <h4>Ingredients</h4>
+                            <ul>
+                                <li tabindex="0">200g plain flour</li>
+                                <li tabindex="0">200g sugar</li>
+                                <li tabindex="0">200g butter</li>
+                                <li tabindex="0">4 eggs</li>
+                                <li tabindex="0">10g baking powder</li>
+                                <li tabindex="0">5g vanilla extract</li>
+                                <li tabindex="0">50ml milk</li>
+                            </ul>
+                            <h4>Instructions</h4>
+                            <ol>
+                                <li>Preheat oven to 180°C and grease a cake tin.</li>
+                                <li>Cream butter and sugar until fluffy.</li>
+                                <li>Add eggs one at a time, beating well.</li>
+                                <li>Sift in flour and baking powder, mix gently.</li>
+                                <li>Stir in vanilla and milk until smooth.</li>
+                                <li>Pour into the tin and bake for 30 minutes.</li>
+                                <li>Cool before serving.</li>
+                            </ol>
+                    </div>
+                    <button id="add-to-shopping-list" aria-label="Add selected items to shopping list">Add to Shopping List</button>
+                    <button id="view-shopping-list">View Shopping List</button>
+                </div>
+                <div id="shopping-list" role="dialog" aria-labelledby="shopping-list-title">
+                    <div id="printing-list"><h2>Your Shopping List</h2>
+                    <ul id="shopping-items">
+
+                    </ul>
+                    </div>
+                    <button id="clear-shopping-list">Clear List</button>
+                    <button id="close-shopping-list">Close List</button>
+                    <button id="print" aria-label="Print shopping list">Print</button>
+                </div>
+                
+                <script src="./static/js/quick.js"></script>
+            </section>
+            <section id="portfolio">
+                <h2 tabindex="0">Portfolio</h2>
+                <p>These gallery images showcase a portfolio 
+                    celebrating 10 years of baking. Click on the images below to view them in a larger size. 
+                    Scroll through to explore each creation in more detail, for a closer look at the craftsmanship!</p>
+                <div class="thumbnails">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_01.jpeg" alt="Swiss Rolls" data-full="./static/images/Full_Images/full_01.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_02.jpeg" alt="Croissant" data-full="./static/images/Full_Images/full_02.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_03.jpeg" alt="Swiss Roll" data-full="./static/images/Full_Images/full_03.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_04.jpeg" alt="Cream Buns" data-full="./static/images/Full_Images/full_04.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_05.jpeg" alt="Breads" data-full="./static/images/Full_Images/full_05.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_06.jpeg" alt="Cheesecake" data-full="./static/images/Full_Images/full_06.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_07.jpeg" alt="Sponge Cake" data-full="./static/images/Full_Images/full_07.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_08.jpeg" alt="Ginger Biscuits" data-full="./static/images/Full_Images/full_08.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_09.jpeg" alt="Sponge Cake" data-full="./static/images/Full_Images/full_09.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_10.jpeg" alt="Layered Cake" data-full="./static/images/Full_Images/full_10.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_11.jpeg" alt="Cupcakes" data-full="./static/images/Full_Images/full_11.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_12.jpeg" alt="Cinnamon Baskets" data-full="./static/images/Full_Images/full_12.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_13.jpeg" alt="Breads" data-full="./static/images/Full_Images/full_13.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_14.jpeg" alt="Sourdough" data-full="./static/images/Full_Images/full_14.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_15.jpeg" alt="Traybake" data-full="./static/images/Full_Images/full_15.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_16.jpeg" alt="Muffins" data-full="./static/images/Full_Images/full_16.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_17.jpeg" alt="Cheesecake" data-full="./static/images/Full_Images/full_17.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_18.jpeg" alt="Round Cake" data-full="./static/images/Full_Images/full_18.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_19.jpeg" alt="Strawberry Slices" data-full="./static/images/Full_Images/full_19.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_20.jpeg" alt="Babka" data-full="./static/images/Full_Images/full_20.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_21.jpeg" alt="Cupcakes" data-full="./static/images/Full_Images/full_21.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_22.jpeg" alt="Babka" data-full="./static/images/Full_Images/full_22.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_23.jpeg" alt="Zebra cake" data-full="./static/images/Full_Images/full_23.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_24.jpeg" alt="Sponge Cake" data-full="./static/images/Full_Images/full_24.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_25.jpeg" alt="Croissants" data-full="./static/images/Full_Images/full_25.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_26.jpeg" alt="Baguettes" data-full="./static/images/Full_Images/full_26.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_27.jpeg" alt="Assortment of bakes" data-full="./static/images/Full_Images/full_27.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_28.jpeg" alt="Bagels" data-full="./static/images/Full_Images/full_28.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_29.jpeg" alt="Poppy Seed cake" data-full="./static/images/Full_Images/full_29.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_30.jpeg" alt="Hot Cross Buns" data-full="./static/images/Full_Images/full_30.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_31.jpeg" alt="Meringue" data-full="./static/images/Full_Images/full_31.jpeg" tabindex="0">
+                    <img class="thumb" src="./static/images/Thumbnails/thumb_32.jpeg" alt="Fougasse" data-full="./static/images/Full_Images/full_32.jpeg" tabindex="0">
+
+                </div>
+                <div class="gallery" id="gallery">
+                    <span class="close">&#10006;</span>
+                    <span class="left">&larr;</span>
+                    <span class="right">&rarr;</span>
+                    <img id="gallery-image">
+                </div>
+            </section>
+            <script src="./static/js/gallery.js"></script>
+            <section id="newsletter" aria-labelledby="newsletter-heading">
+                    
+                    <h2 tabindex="0">Newsletter</h2>
+                    <p>Join our baking community today and never miss a delicious recipe! Sign up for our 
+                        newsletter to get exclusive baking tips, mouthwatering recipes, and special offers 
+                        delivered straight to your inbox. Create your free account now and start your sweet adventure!
+                    </p>
+                    <form id="newsletter-form" novalidate>
+                        <input type="text" id="name" name="name" placeholder="Your Name(at least 3 characters)" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number(10 digits starting with zero)" required>
+                        <div id="password-container">
+                            <input type="password" id="password" name="password" placeholder="Enter your password()" required>
+                            <span id="eye" onmousedown="togglePassword(event)">&#128065</span>
+                        </div>
+                        <button type="submit" value="Submit">Create Account</button>
+                    </form>
+                    <div id="result"></div>
+            </section>
+            <script src="./static/js/form.js"></script>
+{% endblock %}
+{% block script %}
+    <script src="./static/js/script.js"></script>
+{% endblock %}

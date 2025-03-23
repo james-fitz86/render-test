@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+            <a href="/#tray-bakes"><button class="back-to-traybakes" role="button" aria-label="Go back to Tray Bakes">&larr; Tray Bakes</button></a>
+            <h2 id="main-content">Baked Cheesecake</h2>
+            <p>This recipe is intended for a square tray or tin with dimensions of <span id="original-length">23</span>cm x <span id="original-width">23</span>cm.  
+                To adjust the recipe for a different tray size, just enter your tray dimensions in the fields below and scale the ingredients as needed!
+            </p> 
+            <div id="cheesecake" class="scalable-container">
+                <div class="scalable-recipe">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li><span class="amount">200</span> <span class="unit">g</span> digestive biscuits (crushed)</li>
+                        <li><span class="amount">80</span> <span class="unit">g</span> unsalted butter (melted)</li>
+                        <li><span class="amount">500</span> <span class="unit">g</span> cream cheese</li>
+                        <li><span class="amount">150</span> <span class="unit">g</span> granulated sugar</li>
+                        <li><span class="amount">4</span> <span class="unit">g</span> vanilla extract</li>
+                        <li><span class="amount">150</span> <span class="unit">g</span> sour cream</li>
+                        <li><span class="amount">2</span> <span class="unit">g</span> salt</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> eggs (about 2 medium eggs)</li>
+                        <li><span class="amount">20</span> <span class="unit">g</span> all-purpose flour</li>
+                        <li><span class="amount">100</span> <span class="unit">g</span> fresh raspberries</li>
+                        <li><span class="amount">40</span> <span class="unit">g</span> raspberry jam</li>
+                    </ul>
+                    <h4>Enter your tray size below:</h4>
+                    <input id="width-input" type="number" class="positive-number" placeholder="Width in cm"></input>
+                    <input id="length-input" type="number" class="positive-number" placeholder="Length in cm"></input>
+                    <button id="scale-button" aria-label="Scale recipe based on tray size">Scale</button>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p class="error-message" aria-live="polite">Number must be greater than zero.</p>
+                    <p id="no-area">Values must be entered into both boxes</p>
+                </div>
+                <div class="scalable-recipe">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Preheat your oven to 160°C and grease a 23cm x 23cm square baking tin or line it with parchment paper.</li>
+                        <li>In a bowl, mix the crushed digestive biscuits with melted butter until the texture resembles wet sand.</li>
+                        <li>Press the biscuit mixture firmly into the base of the prepared tin and chill in the fridge for 15 minutes.</li>
+                        <li>In a large mixing bowl, beat the cream cheese and granulated sugar until smooth and creamy.</li>
+                        <li>Mix in the vanilla extract, sour cream, and salt until well combined.</li>
+                        <li>Add the eggs one at a time, mixing gently after each addition. Do not overbeat.</li>
+                        <li>Fold in the flour, then gently stir in half of the fresh raspberries.</li>
+                        <li>Pour the cheesecake mixture over the chilled biscuit base and spread evenly.</li>
+                        <li>Dot the raspberry jam over the surface and swirl it lightly with a skewer.</li>
+                        <li>Scatter the remaining fresh raspberries on top.</li>
+                        <li>Bake for 40–45 minutes, or until the edges are set and the center has a slight wobble.</li>
+                        <li>Turn off the oven and leave the cheesecake inside with the door slightly open for 1 hour.</li>
+                        <li>Chill in the fridge for at least 4 hours before slicing and serving.</li>
+                    </ol>
+                </div>
+            </div>
+{% endblock %}
+{% block script %}
+    <script src="./static/js/scale.js"></script>
+{% endblock %}

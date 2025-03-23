@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Betty's Bakes offers a wide variety of delicious and easy-to-follow baking recipes, 
+    from breads to tray bakes, perfect for every occasion. Discover expert tips, seasonal baking inspiration, and Betty's 
+    portfolio of handcrafted creations. Join our community of baking enthusiasts!">
+
+    <title>Betty's Bakes</title>
+    <link href="./static/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head> 
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="hamburger-icon" onclick="myFunction(this)" aria-label="Toggle navigation menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="header-content">
+                <h1>
+                    Betty's Bakes
+                </h1>
+            </div>
+            <div id="header-logo" aria-label="Slideshow of baking items">
+                <div class="slideshow-container" role="region" aria-live="polite">
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 1">
+                        <img src="./static/images/Slideshow/Picture_1.png" style="width:100%" alt="Baked item">
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 2">
+                        <img src="./static/images/Slideshow/Picture_2.png" style="width:100%" alt="Baked item">
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 3">
+                        <img src="./static/images/Slideshow/Picture_3.png" style="width:100%" alt="Baked item">
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 4">
+                        <img src="./static/images/Slideshow/Picture_4.png" style="width:100%" alt="Baked item">
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 5">
+                        <img src="./static/images/Slideshow/Picture_5.png" style="width:100%" alt="Baked item">
+                    </div>
+                    <div class="mySlides fade" role="img" aria-label="Baked item image 6">
+                        <img src="./static/images/Slideshow/Picture_6.png" style="width:100%" alt="Baked item">
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <nav>
+            <a href="{{ url_for('index') }}#home">Home</a>
+            <a href="{{ url_for('index') }}#breads">Breads</a>
+            <a href="{{ url_for('index') }}#tray-bakes">Tray Bakes</a>
+            <a href="{{ url_for('index') }}#quick-recipes">Quick Recipes</a>
+            <a href="{{ url_for('index') }}#portfolio">Portfolio</a>
+            <a href="{{ url_for('index') }}#newsletter">Newsletter</a>
+        </nav>
+        <div id="skiplink"><a tabindex="1" href="#main-content" aria-label="Skip to main content"a>
+            Skip to main content</a>
+        </div>
+        <main>
+            {# (Jinja comment) The block below will be replaced by each of the pages #}
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer tabindex="0" aria-label="footer">
+            <p>Content property of Betty. Design by James.</p>
+        </footer>
+    </div>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>
